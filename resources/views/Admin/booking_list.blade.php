@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +80,7 @@
                     @endforeach
                     </tbody>
                 </table>
-
+    <a class="btn btn-success" href="{{url('/booking_list_pdf')}}">Export PDF</a>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -84,7 +88,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('Admin/inc/footer');
+            
             <!-- End of Footer -->
 
         </div>

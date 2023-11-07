@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +79,9 @@
                     </tr>
                         @endforeach
                     </tbody>
+                    
                 </table>
+                
 <div id="confirmationModal" class="modal">
     <style>/* Custom delete button style */
         .confirm-delete-button {
@@ -126,6 +131,7 @@
         <button class="btn btn-danger" onclick="confirmDelete()">Confirm Delete</button>
         <button class="btn btn-secondary" onclick="closeConfirmationModal()">Cancel</button>
     </div>
+    
 </div>
                 </div>
                 <!-- /.container-fluid -->

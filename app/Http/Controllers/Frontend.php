@@ -5,11 +5,27 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 
+
 class Frontend extends Controller
 {
     public function home(){
         return view("udashboard");
     }
+    public function pre_booking(){
+        return view("previousbooking");
+    }
+    public function showpre_booking(Request $request) {
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+    
+        // Query the Booking model to retrieve matching records
+        $obj = Booking::where('email', $email)
+                      ->where('phone_no', $phone)
+                      ->get();
+    
+        return view("showpreviousbooking")->with(["bok" => $obj]);
+    }
+      
     public function premium_service(){
         $obj=Service::all();
         return view("Premium")->with(["srv"=>$obj]);
@@ -46,8 +62,7 @@ class Frontend extends Controller
         return redirect(url('/payment/' . $pnum . '/' . $sid));
 
         
-        }
-
+    }
     public function carbooking(Request $r){
         $obj=Service::find($r->sid);
         return view("formSubmission")->with(["s"=>$obj]);
@@ -102,4 +117,5 @@ class Frontend extends Controller
     public function contact_us(){
         return view("contactus");
     }
+
 }

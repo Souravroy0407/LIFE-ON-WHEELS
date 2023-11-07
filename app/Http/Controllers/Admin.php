@@ -8,6 +8,7 @@ use App\Models\Booking;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Admin extends Controller
 {
@@ -55,6 +56,11 @@ class Admin extends Controller
     }
 
     public function login(){
+        // $obj=new User();
+        // $obj->name="Kinshuk";
+        // $obj->email="kinshukguha2002@gmail.com";
+        // $obj->password=bcrypt("kinshuk guha");
+        // $obj->save();
         return view("Admin/login");
         
     }
@@ -153,5 +159,10 @@ class Admin extends Controller
         }
     }
     
-       
+    public function booking_list_pdf(){
+        $obj = Booking::all();
+        
+        $pdf = Pdf::loadView('bookings', ['bookings' => $obj]);
+        return $pdf->download('bookings.pdf');
+    }
 }

@@ -149,7 +149,7 @@ function validatePhoneNumber(input) {
     //validate email address
     function validateEmail(input) {
         var email = input.value;
-        var emailPattern = /^[a-zA-Z0-9._-]+@(gmail\.com|yahool\.com|hotmail\.com|outlook\.com)$/;
+        var emailPattern = /^[a-zA-Z0-9._-]+@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com)$/;
 
         if (emailPattern.test(email)) {
             document.getElementById("validationResult2").innerHTML = "";

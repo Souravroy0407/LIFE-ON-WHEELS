@@ -3,7 +3,7 @@
                                     <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
                                     <input type="checkbox" id="drop" />
                                     <ul class="menu">
-                                        <li><a style="color: #00FFFF;" href="{{url('/')}}">Home</a></li>
+                                        <li><a href="{{url('/')}}">Home</a></li>
                                         <li>
                                             <!-- First Tier Drop Down -->
                                             <label for="drop-4" class="toggle">Services<span class="fa fa-angle-down" aria-hidden="true"></span> </label>
@@ -16,11 +16,11 @@
                                         </li>
                                         <li>
                                             <!-- First Tier Drop Down -->
-                                            <label for="drop-4" class="toggle">More Options<span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                            <a href="#">More Options <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                            <label for="drop-4"  class="toggle">More Options<span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                            <a style="color: #00FFFF;" href="#">More Options <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                                             <input type="checkbox" id="drop-2" />
                                             <ul class="inner-dropdown">
-                                                <li><a href="{{url('/pre_booking')}}">Previous Bookings</a></li>
+                                                <li class="active"><a  href="{{url('/pre_booking')}}">Previous Bookings</a></li>
                                                 <li><a href="#lab">Track Ambulance</a></li>
                                                 <li><a href="#test">Coupons</a></li>
                                             </ul>

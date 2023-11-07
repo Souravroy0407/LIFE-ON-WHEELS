@@ -20,7 +20,7 @@
                                             <a href="#">More Options <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                                             <input type="checkbox" id="drop-2" />
                                             <ul class="inner-dropdown">
-                                                <li><a href="#stats">Previous Bookings</a></li>
+                                                <li><a href="{{url('/pre_booking')}}">Previous Bookings</a></li>
                                                 <li><a href="#lab">Track Ambulance</a></li>
                                                 <li><a href="#test">Coupons</a></li>
                                             </ul>
